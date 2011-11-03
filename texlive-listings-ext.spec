@@ -1,3 +1,9 @@
+# revision 19195
+# category Package
+# catalog-ctan /macros/latex/contrib/listings-ext
+# catalog-date 2010-06-29 22:02:31 +0200
+# catalog-license lppl1.2
+# catalog-version 67
 Name:		texlive-listings-ext
 Version:	67
 Release:	1
@@ -66,6 +72,7 @@ being run.y.
 #- source
 %doc %{_texmfdistdir}/source/latex/listings-ext/listings-ext.dtx
 %doc %{_texmfdistdir}/source/latex/listings-ext/listings-ext.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -80,3 +87,5 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
