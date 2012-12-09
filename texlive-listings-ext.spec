@@ -76,3 +76,17 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 67-2
++ Revision: 753388
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 67-1
++ Revision: 718868
+- texlive-listings-ext
+- texlive-listings-ext
+- texlive-listings-ext
+- texlive-listings-ext
+
