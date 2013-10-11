@@ -1,12 +1,12 @@
-# revision 19195
+# revision 29349
 # category Package
 # catalog-ctan /macros/latex/contrib/listings-ext
-# catalog-date 2010-06-29 22:02:31 +0200
+# catalog-date 2012-04-21 20:14:11 +0200
 # catalog-license lppl1.2
 # catalog-version 67
 Name:		texlive-listings-ext
 Version:	67
-Release:	2
+Release:	3
 Summary:	Automated input of source
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/listings-ext
@@ -76,17 +76,3 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 67-2
-+ Revision: 753388
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 67-1
-+ Revision: 718868
-- texlive-listings-ext
-- texlive-listings-ext
-- texlive-listings-ext
-- texlive-listings-ext
-
