@@ -6,7 +6,7 @@
 # catalog-version 67
 Name:		texlive-listings-ext
 Version:	67
-Release:	6
+Release:	7
 Summary:	Automated input of source
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/listings-ext
