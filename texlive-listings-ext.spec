@@ -1,19 +1,13 @@
-# revision 29349
-# category Package
-# catalog-ctan /macros/latex/contrib/listings-ext
-# catalog-date 2012-04-21 20:14:11 +0200
-# catalog-license lppl1.2
-# catalog-version 67
 Name:		texlive-listings-ext
-Version:	67
-Release:	12
+Version:	29349
+Release:	1
 Summary:	Automated input of source
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/listings-ext
 License:	LPPL1.2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listings-ext.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listings-ext.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listings-ext.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listings-ext.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listings-ext.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listings-ext.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ make a steering file that is used by the package when LaTeX is
 being run.y.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -65,14 +59,15 @@ being run.y.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/listings-ext/listings-ext.sh listings-ext.sh
+ln -sf %{_texmfdistdir}/scripts/listings-ext/listings-ext.sh listings-ext.sh
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
