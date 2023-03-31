@@ -1,6 +1,6 @@
 Name:		texlive-listings-ext
 Version:	29349
-Release:	1
+Release:	2
 Summary:	Automated input of source
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/listings-ext
