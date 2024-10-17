@@ -3,7 +3,7 @@ Version:	29349
 Release:	2
 Summary:	Automated input of source
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/listings-ext
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/listings-ext
 License:	LPPL1.2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listings-ext.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/listings-ext.doc.r%{version}.tar.xz
